@@ -8,6 +8,8 @@ defmodule Tortuga.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      # Start the Ecto repo
+      Tortuga.Repo,
       # Start the Tortuga router
       {Bandit, plug: Tortuga.Router}
     ]
