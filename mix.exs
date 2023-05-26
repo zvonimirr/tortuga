@@ -23,7 +23,6 @@ defmodule Tortuga.MixProject do
       source_url: "https://github.com/zvonimirr/tortuga",
       homepage_url: "https://github.com/zvonimirr/tortuga",
       docs: [
-        main: "Tortuga",
         extras: ["README.md"]
       ]
     ]
@@ -40,6 +39,9 @@ defmodule Tortuga.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      # HTTP
+      {:bandit, ">= 0.7.7"},
+      # Tools
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.16.1", only: :test, runtime: false}
