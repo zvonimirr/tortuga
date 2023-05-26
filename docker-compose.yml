@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: "tortuga_db"
+    environment:
+      - POSTGRES_USER=tortuga
+      - POSTGRES_PASSWORD=tortuga
+      - POSTGRES_DB=tortuga_dev
+    ports:
+      - "5432:5432"
