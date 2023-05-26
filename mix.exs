@@ -34,7 +34,7 @@ defmodule Tortuga.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :bunt],
       mod: {Tortuga.Application, []}
     ]
   end
@@ -47,6 +47,8 @@ defmodule Tortuga.MixProject do
       # Ecto
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
+      # Misc.
+      {:bunt, "~> 0.2.1"},
       # Tools
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
