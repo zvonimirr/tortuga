@@ -1,6 +1,6 @@
 defmodule Tortuga.Plugs.Logger do
   @moduledoc """
-  A reimplementation of Plug.Logger that uses colored output and
+  A reimplementation of [Plug.Logger](https://hexdocs.pm/plug/Plug.Logger.html) from `Plug` that uses colored output and
   a custom log format.
   """
 
