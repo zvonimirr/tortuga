@@ -1,6 +1,6 @@
 defmodule Tortuga.Repo do
   @moduledoc """
-  The default Ecto repo for the CMS.
+  The default `Ecto` repo for the CMS.
   """
 
   use Ecto.Repo,
