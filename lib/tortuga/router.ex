@@ -6,6 +6,7 @@ defmodule Tortuga.Router do
 
   use Plug.Router
 
+  plug(Tortuga.Plugs.NormalizeMethod)
   plug(Tortuga.Plugs.Logger)
   plug(:match)
   plug(:dispatch)
