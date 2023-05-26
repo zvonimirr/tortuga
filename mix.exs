@@ -9,6 +9,15 @@ defmodule Tortuga.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
+      # Tests
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
+
       # Docs
       name: "Tortuga",
       source_url: "https://github.com/zvonimirr/tortuga",
@@ -32,7 +41,8 @@ defmodule Tortuga.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.16.1", only: :test, runtime: false}
     ]
   end
 end
